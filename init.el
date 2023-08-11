@@ -10,3 +10,16 @@
 
 ;; Dark mode for nw mode
 (setq frame-background-mode 'dark)
+
+;; Allow for copy/pasting to Mac clipboard
+(require 'xclip)
+(xclip-mode 1)
+
+;; Goes to the last place where it was when you previously visited the same file.
+(save-place-mode t)
+
+;; Remember minibuffer
+(savehist-mode t)
+
+;; Builds list of recently opened files
+(recentf-mode t)
