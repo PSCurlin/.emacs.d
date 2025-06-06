@@ -19,3 +19,9 @@
 
 ;; Builds list of recently opened files
 (recentf-mode t)
+
+;; Some systems use different escape sequences
+(define-key input-decode-map "\e[1;2B" [S-down])
+(define-key input-decode-map "\e[1;2A" [S-up])
+(define-key input-decode-map "\e[1;2C" [S-right])
+(define-key input-decode-map "\e[1;2D" [S-left])
