@@ -6,7 +6,7 @@
 (setq linum-format "%d ") ;; tabs the line numbering slightly
 
 ;; Save temporary file to a backup folder
-(setq backup-directory-alist `(("." . "~/.saves")))
+(setq backup-directory-alist `(("." . "~/.cache/emacs/saves")))
 
 ;; Dark mode for nw mode
 (setq frame-background-mode 'dark)
@@ -27,3 +27,6 @@
 (define-key input-decode-map "\e[1;2D" [S-left])
 (define-key input-decode-map "\e[1;5C" [C-right])
 (define-key input-decode-map "\e[1;5D" [C-left])
+
+;; Allow set cursor with mouse
+(xterm-mouse-mode 1)
