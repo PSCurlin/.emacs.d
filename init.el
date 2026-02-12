@@ -30,3 +30,8 @@
 
 ;; Allow set cursor with mouse
 (xterm-mouse-mode 1)
+
+;; Use xclip for copy/pasting from global clipboard
+(use-package xclip
+             :ensure t
+             :hook (after-init . xclip-mode))
