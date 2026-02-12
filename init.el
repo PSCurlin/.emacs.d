@@ -1,3 +1,9 @@
+;; Package archives
+(require 'package)
+(add-to-list 'package-archives
+             '("MELPA" .
+               "http://melpa.org/packages/"))
+
 ;; Always use y or n for yes or no
 (defalias 'yes-or-no-p 'y-or-n-p)
 
