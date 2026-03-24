@@ -10,6 +10,11 @@
 (unless package-archive-contents
   (package-refresh-contents))
 
+(package-initialize)
+
+(unless package-archive-contents
+  (package-refresh-contents))
+
 ;; Always use y or n for yes or no
 (defalias 'yes-or-no-p 'y-or-n-p)
 
