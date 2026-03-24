@@ -4,6 +4,12 @@
              '("MELPA" .
                "http://melpa.org/packages/"))
 
+(setq package-check-signature nil)
+
+;; Refresh package contents if needed
+(unless package-archive-contents
+  (package-refresh-contents))
+
 ;; Always use y or n for yes or no
 (defalias 'yes-or-no-p 'y-or-n-p)
 
@@ -41,3 +47,11 @@
 (use-package xclip
              :ensure t
              :hook (after-init . xclip-mode))
+
+;; Auto-install symon if not installed
+(unless (package-installed-p 'symon)
+  (package-install 'symon))
+
+;; Load and enable symon
+(require 'symon)
+(symon-mode 1)  ;; Turn on mode-line system monitor
